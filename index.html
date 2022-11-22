@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palestra Itália</title>
+  <link rel="shortcut icon" href="./img/palmeiras-escudo.png" type="image/x-icon">
+  <!-- FONTE LATO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- ICONS DO BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!-- CSS DO BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- JAVASCRIPT DO BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- CSS DO PROJETO -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <div class="container py-3">
+      <a href="#" class="navbar-brand">
+        <img src="./img/Palmeiras-icon.ico" alt="Palmeiras">
+        <!-- <span class="primary-color">Palmeiras</span> -->
+      </a>
+      <button
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar-items"
+        aria-controls="navbar-items"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-items">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link primary-color">Fotos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link primary-color">Ídolos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link primary-color">História</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- SLIDER -->
+  <div class="container" id="slider-container">
+    <div class="carousel slide" id="slider" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button 
+          type="button"
+          class="active" 
+          data-bs-target="#slider" 
+          data-bs-slide-to="0"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button 
+          type="button"
+          data-bs-target="#slider" 
+          data-bs-slide-to="1"
+          aria-label="Slide 1"
+        ></button>
+        <button 
+          type="button"
+          data-bs-target="#slider"
+          data-bs-slide-to="2"
+          aria-label="Slide 1"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img 
+            src="./img/libertadores-abel-2020wide.jpg" 
+            alt="Abel Ferreira libertadores 2020"
+            class="d-block w-100">
+          <div class="carousel-caption">
+            <h5>Conquistas de Abel Ferreira</h5>
+            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img 
+            src="./img/time-libertadores-2021.jpg" 
+            alt="Elenco taça Libertadores 2021"
+            class="d-block w-100">
+          <div class="carousel-caption">
+            <h5>Elenco Campeão da Libertadores 2021</h5>
+            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/time-libertadores-2020.jpeg" 
+            alt="Elenco Campeonato Brasileiro 2022"
+            class="d-block w-100">
+          <div class="carousel-caption">
+            <h5>Elenco Campeão da Libertadores 2020</h5>
+            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+          </div>
+        </div>
+      </div>
+      <button 
+        class="carousel-control-prev" 
+        type="button" 
+        data-bs-target="#slider" 
+        data-bs-slide="prev"
+      >
+      <i class="bi bi-chevron-compact-left"></i>
+      <span class="visually-hidden">Previous</span>
+      <button 
+        class="carousel-control-next" 
+        type="button" 
+        data-bs-target="#slider" 
+        data-bs-slide="next"
+      >
+      <i class="bi bi-chevron-compact-right"></i>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    <!-- MINI BANNERS -->
+    <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="card text-center" id="card1">
+            <i class="bi bi-trophy primary-color"></i>
+            <div class="card-body">
+              <h5 class="card-title primary-color">Brasileirão 2022</h5>
+              <p class="card-text secondary-color">Veja os bastidores da nossa taça dos pontos corridos de 2022.</p>
+              <a href="#" class="btn btn-dark">Assistir</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center">
+            <i class="bi bi-trophy primary-color"></i>
+            <div class="card-body">
+              <h5 class="card-title primary-color">Copa do Brasil 2020</h5>
+              <p class="card-text secondary-color">Veja os bastidores de uma das copas que o Palmeiras conquistou em 2020.</p>
+              <a href="#" class="btn btn-dark">Assistir</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card text-center">
+            <i class="bi bi-trophy primary-color"></i>
+            <div class="card-body">
+              <h5 class="card-title primary-color">Paulistão 2022</h5>
+              <p class="card-text secondary-color">Acompanhe nossa trajetória em busca do campeonato estadual.</p>
+              <a href="#" class="btn btn-dark">Assistir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DESTAQUES -->
+  <div class="container" id="featured-container">
+    <div class="col-12">
+      <h2 class="title primary-color">Destaque</h2>
+      <p class="subtitle secondary-color">Conheça nossos títulos mais aclamados</p>
+    </div>
+    <div class="col-12" id="featured-images">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-libertadores-1999.jpg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">1999</p>
+            <h3>Libertadores da América</h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-brasileirao-2018.jpg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">2018</p>
+            <h3>Campeonato Brasileiro</h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-brasileirao-2016.jpg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">2016</p>
+            <h3>Campeonato Brasileiro</h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-copadobrasil-2012.jpg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">2012</p>
+            <h3>Copa do Brasil</h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-copadobrasil-2015.jpeg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">2015</p>
+            <h3>Copa do Brasil</h3>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="/img/titulo-paulista-2020.jpg" alt="" class="img-fluid">
+          <div class="banner-content">
+            <p class="secondary-color">2020</p>
+            <h3>Campeonato Paulista</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 42:35 -->

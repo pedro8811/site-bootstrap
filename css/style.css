@@ -1,0 +1,199 @@
+*{
+  font-family: 'Lato', sans-serif;
+}
+
+.bg-primary-color{
+  background-color: white;
+}
+
+.bg-secondary-color{
+  background-color: #aff1a9;
+}
+
+.bg-dark-color{
+  background-color: #051b00;
+}
+
+.primary-color{
+  color: #006434;
+}
+.secondary-color{
+  color: #00923F;
+}
+
+/* NAVBAR */
+#navbar{
+  /* background: #006434; 
+  background: linear-gradient(20deg, rgba(0,100,52,1) 0%, rgba(255,255,255,1) 100%);
+  padding: 0;
+  margin: 0;
+  height: 100px; */
+  border-bottom: 1px solid #7e7e7e;
+}
+#navbar a:hover{
+  color: #00923F;
+}
+#navbar a.active{
+  border-bottom: 1px solid #051b00;
+}
+
+.navbar-brand{
+  display: flex;
+}
+.navbar-brand img{
+  padding: 0;
+  width: 90px;
+  margin: 0;
+}
+.navbar-brand span{
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-left: .5em;
+}
+
+#navbar-items .navbar-nav{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+#navbar-items .nav-item{
+  margin: 0 1em;
+}
+/* SLIDER */
+#slider{
+  margin-top: 8em;
+  margin-bottom: 1em;
+}
+#slider .carousel-caption{
+  bottom: 1em;
+}
+#slider .carousel-caption h5{
+  font-size: 1.9em;
+  text-shadow: #000 2px 2px;
+}
+#slider .btn{
+  padding: 0.3 0.8em;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i{
+  color: #00923F;
+  font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target]{
+  background-color: #006434;
+  opacity: .8;
+}
+
+.carousel-indicators .active{
+  background-color: #0a3600;
+}
+
+@media(min-width: 768px){
+  #slider .carousel-caption{
+    bottom: 10em;
+  }
+  #slider .carousel-caption h5{
+    font-size: 4em;
+    text-shadow: #000 2px 3px 10px;
+  }
+  #slider .btn{
+    padding: 0.6 1.6em;
+    font-size: 1.2em;
+  }
+  .carousel-indicators{
+    bottom: 7em;
+  }
+}
+
+/* MINI BANNERS */
+#mini-banners{
+  margin-bottom: 4em;
+}
+
+#mini-banners .card{
+  padding: 2em .3em;
+  margin-bottom: 1em;
+}
+
+#mini-banners i{
+  font-size: 4em;
+}
+
+#mini-banners .card-title{
+  margin-bottom: 1.5em;
+}
+
+#mini-baaners .btn{
+  margin-top: 1.5em;
+  padding: .6em 1.2em;
+}
+@media (min-width: 768px) {
+  #mini-banners{
+    margin-top: -6em;
+  }
+}
+
+/* DESTAQUES */
+#featured-container{
+  margin-bottom: 4em;
+}
+
+.title{
+  font-size: 1.75em;
+  margin-bottom: .4;
+  position: relative;
+}
+
+.title:before{
+  width: 75px;
+  border-top: 4px solid #7a7a7a;
+  content: "";
+  position: absolute;
+  bottom: 2em;
+}
+
+#featured-images{
+  margin-top: 2em;
+}
+
+#featured-images .col-md-4{
+  position: relative;
+  cursor: pointer;
+}
+#featured-images .col-md-4:hover > .banner-content{
+  opacity: .8;
+}
+
+#featured-images .banner-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: .6;
+  transition: .5s;
+}
+
+@media(min-width: 768px){
+
+  .title{
+    font-size: 2.4em;
+  }
+
+  .title::before{
+    bottom: 1.5em;
+  }
+  #featured-images .banner-content{
+    opacity: 0;
+  }
+}
