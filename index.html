@@ -18,14 +18,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <!-- CSS DO PROJETO -->
   <link rel="stylesheet" href="./css/style.css">
-
+  <script>
+    // ---------------- NAVBAR HIDE ON SCROLL ----------------
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-150px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    // -------------------------------------------------------
+  </script>
 </head>
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
     <div class="container py-3">
       <a href="#" class="navbar-brand">
-        <img src="./img/Palmeiras-icon.ico" alt="Palmeiras">
+        <img src="./img/palmeiras-escudo-antigoo.png" alt="Palmeiras">
         <!-- <span class="primary-color">Palmeiras</span> -->
       </a>
       <button
@@ -45,6 +58,9 @@
             <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
+            <a href="#" class="nav-link primary-color">Títulos</a>
+          </li>
+          <li class="nav-item">
             <a href="#" class="nav-link primary-color">Fotos</a>
           </li>
           <li class="nav-item">
@@ -54,6 +70,12 @@
             <a href="#" class="nav-link primary-color">História</a>
           </li>
         </ul>
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>
@@ -90,7 +112,7 @@
             class="d-block w-100">
           <div class="carousel-caption">
             <h5>Conquistas de Abel Ferreira</h5>
-            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+            <a href="#" class="btn btn-light">Ver mais fotos</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -99,8 +121,8 @@
             alt="Elenco taça Libertadores 2021"
             class="d-block w-100">
           <div class="carousel-caption">
-            <h5>Elenco Campeão da Libertadores 2021</h5>
-            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+            <h5>Campeão Libertadores 2021</h5>
+            <a href="#" class="btn btn-light">Ver mais fotos</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -109,8 +131,8 @@
             alt="Elenco Campeonato Brasileiro 2022"
             class="d-block w-100">
           <div class="carousel-caption">
-            <h5>Elenco Campeão da Libertadores 2020</h5>
-            <a href="#" class="btn btn-dark">Ver mais fotos</a>
+            <h5>Campeão Libertadores 2020</h5>
+            <a href="#" class="btn btn-light">Ver mais fotos</a>
           </div>
         </div>
       </div>
@@ -139,9 +161,10 @@
           <div class="card text-center" id="card1">
             <i class="bi bi-trophy primary-color"></i>
             <div class="card-body">
+              <!-- <img src="./img/abel 2022.jpg" alt=""> -->
               <h5 class="card-title primary-color">Brasileirão 2022</h5>
-              <p class="card-text secondary-color">Veja os bastidores da nossa taça dos pontos corridos de 2022.</p>
-              <a href="#" class="btn btn-dark">Assistir</a>
+              <p class="card-text secondary-color">Veja os bastidores da nossa conquista dos pontos corridos de 2022.</p>
+              <button type="button" class="btn btn-outline-success">Assistir</button>
             </div>
           </div>
         </div>
@@ -151,7 +174,7 @@
             <div class="card-body">
               <h5 class="card-title primary-color">Copa do Brasil 2020</h5>
               <p class="card-text secondary-color">Veja os bastidores de uma das copas que o Palmeiras conquistou em 2020.</p>
-              <a href="#" class="btn btn-dark">Assistir</a>
+              <button type="button" class="btn btn-outline-success">Assistir</button>
             </div>
           </div>
         </div>
@@ -160,8 +183,8 @@
             <i class="bi bi-trophy primary-color"></i>
             <div class="card-body">
               <h5 class="card-title primary-color">Paulistão 2022</h5>
-              <p class="card-text secondary-color">Acompanhe nossa trajetória em busca do campeonato estadual.</p>
-              <a href="#" class="btn btn-dark">Assistir</a>
+              <p class="card-text secondary-color">Acompanhe nossa trajetória em busca do campeonato estadual com final histórica.</p>
+              <button type="button" class="btn btn-outline-success">Assistir</button>
             </div>
           </div>
         </div>
@@ -172,7 +195,7 @@
   <div class="container" id="featured-container">
     <div class="col-12">
       <h2 class="title primary-color">Destaque</h2>
-      <p class="subtitle secondary-color">Conheça nossos títulos mais aclamados</p>
+      <p class="subtitle secondary-color">Lembranças de nossos títulos anteriores!</p>
     </div>
     <div class="col-12" id="featured-images">
       <div class="row g-4">
@@ -221,7 +244,183 @@
       </div>
     </div>
   </div>
+  <!-- INFO -->
+  <div class="container" id="info-container">
+    <div class="col-12">
+      <h2 class="title primary-color">Entrevistas</h2>
+      <p class="subtitle secondary-color">
+        Último pronunciamento de Abel Ferreira.
+      </p>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col12 col-md-5" id="info-banner">
+          <img 
+          src="./img/abel-entrevista.jpg" 
+          alt="Abel em coletiva."
+          class="img-fluid">
+        </div>
+        <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="primary-color">Abel sobre 2022</h2>
+              <p class="subtitle secondary-color">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum non quaerat ipsam perferendis ex fuga, ducimus est animi! Ipsa, mollitia dolore voluptatem dolores inventore facere nam recusandae error vel consequuntur?
+              </p>
+            </div>
+            <div class="col-12" id="info-numbers">
+              <div class="row">
+                <div class="col-4">
+                  <h3 class="primary-color">47</h3>
+                  <p class="secondary-color">Vitórias em 2022</p>
+                </div>
+                <div class="col-4">
+                  <h3 class="primary-color">40</h3>
+                  <p class="secondary-color">Vitórias em 2021</p>
+                </div>
+                <div class="col-4">
+                  <h3 class="primary-color">39</h3>
+                  <p class="secondary-color">Vitórias em 2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="col12">
+              <a href="#" class="btn btn-light">Estatíticas Completas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="row text-center">
+        <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="primary-color">Palmeiras na Libertadores!</h2>
+              <p class="subtitle secondary-color">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum non quaerat ipsam perferendis ex fuga, ducimus est animi! Ipsa, mollitia dolore voluptatem dolores inventore facere nam recusandae error vel consequuntur?
+              </p>
+            </div>
+            <div class="col-12" id="info-numbers">
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="primary-color placar">
+                    Palmeiras 0 x 0 Atlético
+                  </h3>
+                  <p class="secondary-color">No agregado: 2 x 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col12">
+              <a href="#" class="btn btn-light">Melhores Momentos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col12 col-md-5" id="info-banner">
+          <img 
+          src="./img/palmeiras-atletico.jpg"
+          alt="Comemoração ao final da última partida pela libertadores."
+          class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="container-fluid bg-dark-color" id="footer">
+    <div class="container">
+      <div class="row">
+        <!-- FOOTER TOP -->
+        <div class="col-12" id="footer-top">
+          <div class="row justify-content-between">
+            <div class="col-5"><h2>Sociedade Esportiva Palmeiras</h2></div>
+            <!-- <div class="col-4" id="social-icons">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-youtube"></i>
+            </div> -->
+          </div>
+        </div>
+        <!-- FOOTER DETAILS -->
+        <div class="col-12" id="footer-details">
+          <div class="row">
+            <div class="col-12 col-md-4" id="news-container">
+              <h4>Fique por dentro de tudo que acontece no clube!</h4>
+              <p class="secondary-color">Receba as notícias mais recentes em seu e-mail!</p>
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Digite o seu e-mail">
+                </div>
+                <button class="btn btn-light" type="submit">Inscrever</button>
+              </form>
+            </div>
+            <div class="col-12 col-md-4" id="contact-container">
+              <h4>Redes sociais e formas de contato!</h4>
+              <div class="social-media">
+                <i class="bi bi-instagram"></i>
+                <p class="secondary-color">@palmeiras</p>
+              </div>
+              <div class="social-media">
+                <i class="bi bi-facebook"></i>
+                <p class="secondary-color">Palmeiras</p>
+              </div>
+              <div class="social-media">
+                <i class="bi bi-twitter"></i>
+                <p class="secondary-color"></i>@palmeiras</p>
+              </div>
+              <div class="social-media">
+                <i class="bi bi-youtube"></i>
+                <p class="secondary-color">TV Palmeiras</p>
+              </div>
+              <div class="social-media">
+                <i class="bi bi-envelope-fill"></i>
+                <p class="secondary-color">contato@palmeiras.com</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4" id="links-container">
+              <div class="row">
+                <h4>Acompanhe outros esportes e modalidades:</h4>
+                <div class="col-6">
+                  <ul class="list-unstyled">
+                    <p>Futebol</p>
+                    <li><a href="#" class="secondary-color">Feminino Profissional</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-15</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-17</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-21</a></li>
+                    <li><a href="#" class="secondary-color">Feminino sub-15</a></li>
+                    <li><a href="#" class="secondary-color">Feminino sub-17</a></li>
+                    <li><a href="#" class="secondary-color">Feminino sub-21</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-unstyled">
+                    <p>Basquete</p>
+                    <li><a href="#" class="secondary-color">Feminino Profissional</a></li>
+                    <li><a href="#" class="secondary-color">Masculino Profissional</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-15</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-17</a></li>
+                    <li><a href="#" class="secondary-color">Masculino sub-21</a></li>
+                    <li><a href="#" class="secondary-color">Feminino sub-17</a></li>
+                    <li><a href="#" class="secondary-color">Feminino sub-21</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER BOTTOM -->
+        <div class="col-12" id="footer-bottom">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-3">
+              <p class="secondary-color">Palmeiras &copy; 2022</p>
+            </div>
+            <div class="col-12 col-md-3">
+              <p class="secondary-color" id="avanti-palestra">Avanti Palestra!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-
-<!-- 42:35 -->
